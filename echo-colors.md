@@ -1,6 +1,3 @@
-
----
-
 ````md
 # Shell Script Color Codes 🎨
 
@@ -10,31 +7,31 @@ This document contains easy-to-use ANSI color codes for enhancing shell script o
 
 ## Basic Color Codes
 
-| Color   | Code      |
-|--------|-----------|
-| Reset  | `\e[0m`   |
-| Black  | `\e[30m`  |
-| Red    | `\e[31m`  |
-| Green  | `\e[32m`  |
-| Yellow | `\e[33m`  |
-| Blue   | `\e[34m`  |
-| Magenta | `\e[35m` |
-| Cyan   | `\e[36m`  |
-| White  | `\e[37m`  |
+| Color   | ANSI Code   |
+|-------- |-------------|
+| Reset   | `\e[0m`     |
+| Black   | `\e[30m`    |
+| Red     | `\e[31m`    |
+| Green   | `\e[32m`    |
+| Yellow  | `\e[33m`    |
+| Blue    | `\e[34m`    |
+| Magenta | `\e[35m`    |
+| Cyan    | `\e[36m`    |
+| White   | `\e[37m`    |
 
 ---
 
 ## Bold Color Codes
 
-| Bold Color | Code       |
-|-----------|------------|
-| Bold Red | `\e[1;31m`  |
-| Bold Green | `\e[1;32m`|
-| Bold Yellow | `\e[1;33m` |
+| Bold Color  | ANSI Code    |
+|------------ |--------------|
+| Bold Red    | `\e[1;31m`   |
+| Bold Green  | `\e[1;32m`   |
+| Bold Yellow | `\e[1;33m`   |
 
 ---
 
-## Example Shell Script
+## Usage Example
 
 ```bash
 #!/bin/bash
@@ -51,11 +48,11 @@ echo -e "${YELLOW}Warning: Low Disk Space!${RESET}"
 
 ---
 
-## Notes
+### Notes
 
-✔ Always end colored text with `${RESET}` to return back to normal terminal color.
-✔ Works in most Linux/Unix terminals.
-✔ If colors do not appear, remove `-e` from `echo` and try `printf`.
+* ✔ Always reset the color using `${RESET}` after the message.
+* ✔ Works in most Linux/macOS terminals.
+* ❌ Windows CMD does **not** support ANSI by default.
 
 ---
 
